@@ -555,29 +555,25 @@
             </div>
 
             <div class="nav-item" style="margin-bottom: 0;">
-                <a href="#" class="nav-link">
-                    <i class="fas fa-money-bill-wave"></i>
-                <span>Laporan Pemasukkan</span>
+                <a href="{{ route('laporan.pemasukan') }}" class="nav-link">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Laporan Pemasukan</span>
                 </a>
             </div>
+
             <div class="nav-item" style="margin-bottom: 0;">
-                <a href="#" class="nav-link">
-                    <i class="fas fa-receipt me-2"></i>
+                <a href="{{ route('laporan.pengeluaran') }}" class="nav-link">
+                    <i class="fas fa-chart-bar"></i>
                     <span>Laporan Pengeluaran</span>
                 </a>
             </div>
+
             <div class="nav-item" style="margin-bottom: 0;">
                 <a href="#" class="nav-link">
-                    <i class="fas fa-chart-bar"></i>
+                    <i class="fas fa-chart-pie"></i>
                     <span>Grafik Keseluruhan</span>
                 </a>
             </div>
-            {{-- <div class="nav-item" style="margin-bottom: 0;">
-                <a href="#" class="nav-link">
-                    <i class="fas fa-cog"></i>
-                    <span>Pengaturan</span>
-                </a>
-            </div> --}}
         </div>
     </div>
 

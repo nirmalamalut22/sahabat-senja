@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\LaporanController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DatalansiaController;
 use App\Http\Controllers\DataperawatController;
+use App\Http\Controllers\Middleware\LaporanController as MiddlewareLaporanController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -21,6 +23,10 @@ Route::controller(AuthController::class)->group(function () {
 Route::middleware(['auth'])->group(function () {
 Route::get('/admin/dashboard', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
 
+// Laporan
+Route::get('/laporan/pemasukan', [MiddlewareLaporanController::class, 'pemasukan'])->name('laporan.pemasukan');
+Route::get('/laporan/pengeluaran', [MiddlewareLaporanController::class, 'pengeluaran'])->name('laporan.pengeluaran');
+
 // data lansia (admin)
 Route::get('/datalansia', [DatalansiaController::class, 'index'])->name('admin.datalansia.index');
 Route::get('/datalansia/tambah', [DatalansiaController::class, 'create'])->name('admin.datalansia.create');
@@ -37,3 +43,6 @@ Route::post('/dataperawat/store', [DataperawatController::class, 'store'])->name
 Route::get('/dataperawat/edit/{id}', [DataperawatController::class, 'edit'])->name('admin.dataperawat.edit');
 Route::post('/dataperawat/update/{id}', [DataperawatController::class, 'update'])->name('admin.dataperawat.update');
 Route::get('/dataperawat/hapus/{id}', [DataperawatController::class, 'destroy'])->name('admin.dataperawat.destroy');
+
+
+
