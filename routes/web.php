@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\Admin\LaporanController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\DatalansiaController;
-use App\Http\Controllers\DataperawatController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\DatalansiaController;
+use App\Http\Controllers\Admin\DataperawatController;
 use App\Http\Controllers\Middleware\LaporanController as MiddlewareLaporanController;
 use Illuminate\Support\Facades\Route;
 

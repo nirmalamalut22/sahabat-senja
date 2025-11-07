@@ -28,4 +28,9 @@ class Datalansia extends Model
         'no_hp_anak',
         'email_anak',
     ];
+
+        public function kondisi()
+    {
+        return $this->hasMany(Kondisi::class, 'id_lansia');
+    }
 }
